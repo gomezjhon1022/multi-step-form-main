@@ -3,15 +3,20 @@ import { PersonalInfo } from './components/PersonalInfo';
 import { Plan } from './components/Plan';
 import { AddOns } from './components/AddOns';
 import { FinishingUp } from './components/FinishingUp';
+import { Header } from './components/Header';
+import { Footer } from './components/Footer';
 
 function App() {
   return (
       <div className="App">
-        <div>hola</div>
-        <PersonalInfo/>
-        <Plan/>
-        <AddOns/>
-        <FinishingUp/>
+        <Header/>
+        <main>
+          <PersonalInfo/>
+          {/* <Plan/>
+          <AddOns/>
+          <FinishingUp/> */}
+          <Footer/>
+        </main>
       </div>
   );
 }
