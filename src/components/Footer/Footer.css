@@ -1,4 +1,3 @@
-
 :root {
   --main-marine-blue: hsl(213, 96%, 18%);
   --main-purplish-blue:hsl(243, 100%, 62%);
@@ -12,19 +11,9 @@
   --neutral-white:hsl(0, 0%, 100%);
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 
-.App {
-  text-align: center;
-  height: 100vh;
-  font-family: 'Ubuntu', sans-serif;
-}
-
-main {
-  height: 73%;
+.footer {
+  height: 15%;
   width: 100%;
+  background-color: var(--main--strawberry-red);
 }
