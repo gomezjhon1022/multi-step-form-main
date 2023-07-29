@@ -44,15 +44,31 @@ form {
   display: inline-block;
   width: 100%;
 }
-label {
+.card__label {
   display: flex;
   flex-direction: column;
   text-align: left;
 }
 
+.card__subtitle--container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+}
+
+.card--error {
+  width: 60%;
+  color: red;
+  font-size: 14px;
+  margin-top: 16px;
+  text-align: end;
+  /* display: none; */
+}
+
 .card__subtitle {
+  width: 40%;
   color:var(--main-marine-blue);
-  font-size: 16px;
+  font-size: 14px;
   margin-top: 16px;
   margin-bottom: 4px;
 }
