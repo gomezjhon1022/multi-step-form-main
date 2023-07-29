@@ -65,6 +65,10 @@ form {
   /* display: none; */
 }
 
+.input--error {
+  border: solid 2px red !important;
+}
+
 .card__subtitle {
   width: 40%;
   color:var(--main-marine-blue);
