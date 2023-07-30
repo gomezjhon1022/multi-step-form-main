@@ -1,45 +1,56 @@
-// import './plan.css';
+import './plan.css';
+import iconAdvanced from '../../assets/icon-advanced.svg';
 
-function Plan() {
+function Plan({montly, setMonthly}) {
+
+  const handlePlanChange = (event) => {
+    const newValue=event.target.checked;
+    setMonthly(newValue);
+    console.log(newValue);
+  }
 
   return (
   <div className="card">
-    <form>
+    <div className='card__plan'>
       <h2 className='card__title'>Select your plan</h2>
       <p className='card__description'>You have de option of monthly or<br/>
         yearly billing.
       </p>
-
-
-      {/* <div className='card__information'>
-        <label  for="name">
-          <span className='card__subtitle'>Name</span>
-          <input type='text' id="name" className='card__input' placeholder='e.g. Stephen King' required></input>
-        </label>
-        <label for="email" >
-          <span className='card__subtitle'>Email Adress</span>
-          <input type='email' id="email" className='card__input' placeholder='e.g. stephenking@lorem.com' required></input>
-        </label>
-        <label for="phone">
-          <span className='card__subtitle'>Phone Number</span>
-          <input type='number' id='phone' className='card__input' placeholder='e.g. +1 234 567 890' required></input>
-        </label>
-      </div> */}
-
-      <div className="form-group">
-        <label htmlFor="option1">Option 1</label>
-        <input type="radio" id="option1" name="option" value="option1"/>
-      </div>
-      <div className="form-group">
-        <label htmlFor="option2">Option 2</label>
-        <input type="radio" id="option2" name="option" value="option2"/>
-      </div>
-      <div className="form-group">
-        <label htmlFor="option3">Option 3</label>
-        <input type="radio" id="option3" name="option" value="option3"/>
+      <div className='plan__options--container'>
+        <div className='plan arcade'>
+          <div className='plan__image'></div>
+          <div className='plan__information--container'>
+            <div className='plan__name'>Arcade</div>
+            <div className='plan__price'></div>
+          </div>
+        </div>
+        <div className='plan advanced'>
+          <div className='plan__image'></div>
+          <div className='plan__information--container'>
+            <div className='plan__name'>Advanced</div>
+            <div className='plan__price'></div>
+          </div>
+        </div>
+        <div className='plan pro'>
+          <div className='plan__image'></div>
+          <div className='plan__information--container'>
+            <div className='plan__name'>Pro</div>
+            <div className='plan__price'></div>
+          </div>
+        </div>
       </div>
 
-    </form>
+      <div className='plan__time'>
+        <p className='plan__monthly'>monthly</p>
+        <label className='plan__time--switcher' htmlFor='switch'>
+          <input checked={montly} onChange={handlePlanChange} className='toggle__input' type='checkbox' id="switch"/>
+          <span className='toggle__fill' htmlFor='switch'></span>
+        </label>
+        <p className='plan__yearly'>Yearly</p>
+      </div>
+
+
+    </div>
   </div>
 
   )

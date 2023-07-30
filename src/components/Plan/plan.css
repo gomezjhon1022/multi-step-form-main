@@ -1,10 +1,133 @@
+:root {
+  --main-marine-blue: hsl(213, 96%, 18%);
+  --main-purplish-blue:hsl(243, 100%, 62%);
+  --main-pastel-blue:hsl(228, 100%, 84%);
+  --main-light-blue:hsl(206, 94%, 87%);
+  --main--strawberry-red:hsl(354, 84%, 57%);
 
-@import ".././../syles/globales.css";
+  --neutral-cool-gray:hsl(231, 11%, 63%);
+  --neutral-light-gray:hsl(229, 24%, 87%);
+  --neutral-magnolia:hsl(231, 100%, 99%);
+  --neutral-white:hsl(0, 0%, 100%);
+}
 
-/* .card {
+.card {
   height: 85%;
   width: 100%;
   background-color: var(--neutral-light-gray);
   display: flex;
   justify-content: center;
-} */
+}
+
+.card__plan {
+  height: 118%;
+  width: 90%;
+  padding: 0 24px;
+  background-color: var(--neutral-magnolia);
+  border-radius: 15px;
+  transform: translate(0, -90px);
+}
+
+.card__title {
+  text-align: left;
+  margin: 16px 0;
+}
+.card__description {
+  text-align: left;
+  color: var(--neutral-cool-gray);
+  font-size: 18px;
+  line-height: 130%;
+}
+
+.plan__options--container {
+  height: 60%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.plan {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+  border:solid 1px var(--neutral-light-gray);
+  border-radius: 8px;
+
+}
+
+
+.plan__time {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 12%;
+  background-color: var(--neutral-light-gray);
+  border-radius: 8px;
+}
+
+.plan__image {
+  width: 40px;
+  height: 40px;
+  margin: 0 14px;
+  padding: 8px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.arcade .plan__image {
+  background-image: url(../../assets/icon-arcade.svg);
+}
+
+.advanced .plan__image {
+  background-image: url(../../assets/icon-advanced.svg);
+}
+
+.pro .plan__image {
+  background-image: url(../../assets/icon-pro.svg);
+}
+
+
+
+.plan__time--switcher {
+  width: 30%;
+}
+
+.toggle__input {
+  display: none;
+}
+
+.toggle__fill {
+  display: inline-block;
+  width:65px;
+  height:33px;
+  background-color: var(--main-marine-blue);
+  border-radius: 100px;
+  cursor: pointer;
+  position: relative;
+
+}
+
+.toggle__fill::after {
+  content: '';
+  display: block;
+  width: 25px;
+  height: 25px;
+  background: white;
+  border-radius: 100px;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  transition: .2s;
+}
+
+#switch:checked + .toggle__fill::after{
+  left: 36px;
+}
+
+#switch:checked + .plan__yearly {
+  color: red;
+  font-weight: 700;
+  background-color: red;
+}

@@ -32,9 +32,12 @@
 }
 
 form {
+  height: 100%;
   padding: 0 24px;
-  width: 70%;
-  margin: 0 24px;
+  width: 90%;
+  background-color: var(--neutral-magnolia);
+  border-radius: 15px;
+  transform: translate(0, -72px);
 }
 .card__title {
   color:var(--main-marine-blue)
@@ -62,7 +65,6 @@ form {
   font-size: 14px;
   margin-top: 16px;
   text-align: end;
-  /* display: none; */
 }
 
 .input--error {
@@ -86,11 +88,5 @@ form {
   padding: 10px;
 }
 
-form {
-  height: 100%;
-  width: 90%;
-  background-color: var(--neutral-magnolia);
-  border-radius: 15px;
-  transform: translate(0, -72px);
-}
+
 

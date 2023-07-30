@@ -13,14 +13,12 @@ function App() {
   const [user, setUser]=useState({data:'', valid:true});
   const [email, setEmail]=useState({data:'', valid:true});
   const [phone, setPhone]=useState({data:'', valid:true});
+  const [monthly, setMonthly]=useState(false);
 
   const regularexpression = {
-	user: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
+	user: /^[a-zA-ZÀ-ÿ\s]{1,40}$/,
 	email: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
 	phone: /^\d{7,14}$/ // 7 a 14 numeros.
-  // user: /^[a-zA-Z0-9\_\-]{1,16}$/, // Letras, numeros, guion y guion_bajo
-	// nombre: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
-	// password: /^.{4,12}$/, // 4 a 12 digitos.
 }
 
   return (
@@ -40,7 +38,10 @@ function App() {
                 validemail={email.valid}
                 validphone={phone.valid}
               />} ></Route>
-              <Route path="/plan" element={<Plan/>}></Route>
+              <Route path="/plan" element={<Plan
+                monthly={monthly}
+                setMonthly={setMonthly}
+              />}></Route>
               <Route path="/addons" element={<AddOns/>}></Route>
               <Route path="/finishingup" element={<FinishingUp/>}></Route>
               <Route path="*" element={<NotFound></NotFound>}></Route>
