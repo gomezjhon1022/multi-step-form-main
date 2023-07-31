@@ -17,17 +17,33 @@
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
-  padding: 0 20px;
+  justify-content: space-between;
+  padding: 0 30px;
   background-color: var(--neutral-magnolia);
 }
 
 .button--next {
   height: 40px;
   width: 110px;
+  font-weight: 700;
   border-radius: 8px;
   color: var(--neutral-light-gray);
   background-color: var(--main-marine-blue);
   border: none;
   cursor: pointer;
+}
+
+.button--back {
+  height: 40px;
+  width: 110px;
+  font-weight: 700;
+  border-radius: 8px;
+  color: var(--neutral-cool-gray);
+  background-color: var(--neutral-magnolia);
+  border: none;
+  cursor: pointer;
+}
+
+.button--back:hover {
+  color: var(--main-marine-blue);
 }

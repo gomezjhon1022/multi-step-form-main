@@ -38,6 +38,7 @@ function Footer({user,email,phone, regularexpressionUser,regularexpressionEmail,
 
   return (
   <div className="footer">
+    <button className='button--back' >Go Back</button>
     <button className='button--next' onClick={validation}>Next Step</button>
   </div>)
 }

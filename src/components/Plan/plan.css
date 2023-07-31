@@ -34,6 +34,7 @@
 }
 .card__description {
   text-align: left;
+  margin-bottom: 20px;
   color: var(--neutral-cool-gray);
   font-size: 18px;
   line-height: 130%;
@@ -62,7 +63,7 @@
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  height: 12%;
+  height: 10%;
   background-color: var(--neutral-light-gray);
   border-radius: 8px;
 }
@@ -74,6 +75,25 @@
   padding: 8px;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.plan__information--container {
+  text-align: left;
+}
+
+.plan__name {
+  font-size: 18px;
+  color: var(--main-marine-blue);
+  font-weight: 500;
+}
+.plan__price {
+  font-size: 16px;
+  color: var(--neutral-cool-gray);
+}
+
+.plann__discount {
+  font-size: 14px;
+  color: var(--main-marine-blue);
 }
 
 .arcade .plan__image {
@@ -88,20 +108,26 @@
   background-image: url(../../assets/icon-pro.svg);
 }
 
-
-
-.plan__time--switcher {
-  width: 30%;
-}
-
 .toggle__input {
   display: none;
 }
 
+
+.plan__time--switcher {
+  width: 100%;
+  height: 23px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+
+}
+
 .toggle__fill {
   display: inline-block;
-  width:65px;
-  height:33px;
+  /* width:65px;
+  height:33px; */
+  width: 34px;
+  height: 17px;
   background-color: var(--main-marine-blue);
   border-radius: 100px;
   cursor: pointer;
@@ -112,22 +138,35 @@
 .toggle__fill::after {
   content: '';
   display: block;
-  width: 25px;
-  height: 25px;
+  width: 12px;
+  height: 12px;
   background: white;
   border-radius: 100px;
   position: absolute;
-  top: 4px;
-  left: 4px;
+  top: 3px;
+  left: 3px;
   transition: .2s;
 }
 
 #switch:checked + .toggle__fill::after{
-  left: 36px;
+  left: 20px;
 }
 
-#switch:checked + .plan__yearly {
-  color: red;
-  font-weight: 700;
-  background-color: red;
+.plan__monthly, .plan__yearly {
+  width: 60px;
+  height: 23px;
+  font-size: 16px;
+  font-weight: 300;
+  color: var(--neutral-cool-gray);
 }
+
+.plan__selected {
+  width: 60px;
+  height: 23px;
+  font-size: 16px;
+  font-weight: 500;
+  color:var(--main-marine-blue);
+}
+
+
+
