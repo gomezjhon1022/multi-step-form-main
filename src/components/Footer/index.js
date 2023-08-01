@@ -1,12 +1,12 @@
 import { useNavigate } from 'react-router-dom';
 import './Footer.css'
 
-function Footer({user,email,phone, regularexpressionUser,regularexpressionEmail,regularexpressionPhone, setUser, setEmail, setPhone, step, setStep}) {
+function Footer({user,email,phone, regularexpressionUser,regularexpressionEmail,regularexpressionPhone, setUser, setEmail, setPhone, step, setStep,addOns,setAddOns}) {
   const navigate = useNavigate();
 
   const step1=1;
 
-  const next = () => {
+  const next = (event) => {
     let data1Is=false;
     let data2Is=false;
     let data3Is=false;
@@ -40,6 +40,12 @@ function Footer({user,email,phone, regularexpressionUser,regularexpressionEmail,
     if (step===2) {
       navigate('/addons');
       setStep(3);
+    }
+
+    if (step==3) {
+      navigate('/finishingup');
+      setStep(4);
+      console.log(addOns);
     }
   }
 
