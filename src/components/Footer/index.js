@@ -48,6 +48,10 @@ function Footer({user,email,phone, regularexpressionUser,regularexpressionEmail,
       setStep(1);
       navigate('/');
     }
+    if (step===3) {
+      setStep(2);
+      navigate('/plan');
+    }
   }
 
   return (
