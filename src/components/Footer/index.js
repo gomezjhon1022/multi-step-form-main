@@ -6,43 +6,54 @@ function Footer({user,email,phone, regularexpressionUser,regularexpressionEmail,
 
   const step1=1;
 
-  const validation = () => {
+  const next = () => {
     let data1Is=false;
     let data2Is=false;
     let data3Is=false;
-    if(regularexpressionUser) {
 
-
-      if(regularexpressionUser.test(user.data)) {
-          setUser({...user, valid:true});
-          data1Is=true;
-      } else {
-        setUser({...user, valid:false});
+    if (step===1) {
+      if(regularexpressionUser) {
+        if(regularexpressionUser.test(user.data)) {
+            setUser({...user, valid:true});
+            data1Is=true;
+        } else {
+          setUser({...user, valid:false});
+        }
+        if(regularexpressionEmail.test(email.data)) {
+          setEmail({...email, valid:true});
+          data2Is=true;
+        } else {
+          setEmail({...email, valid:false});
+        }
+        if(regularexpressionPhone.test(phone.data)) {
+          setPhone({...phone, valid:true});
+          data3Is=true;
+        } else {
+          setPhone({...phone, valid:false});
+        }
       }
-      if(regularexpressionEmail.test(email.data)) {
-        setEmail({...email, valid:true});
-        data2Is=true;
-      } else {
-        setEmail({...email, valid:false});
-      }
-      if(regularexpressionPhone.test(phone.data)) {
-        setPhone({...phone, valid:true});
-        data3Is=true;
-      } else {
-        setPhone({...phone, valid:false});
+      if (data1Is && data2Is && data3Is) {
+        navigate('/plan');
+        setStep(2);
       }
     }
+    if (step===2) {
+      navigate('/addons');
+      setStep(3);
+    }
+  }
 
-    if (data1Is && data2Is && data3Is) {
-      navigate('/plan');
-      setStep(2);
+  const back = () => {
+    if (step===2) {
+      setStep(1);
+      navigate('/');
     }
   }
 
   return (
   <div className="footer">
-    <button className={`button--back ${step===step1?'hidden':''}`} >Go Back</button>
-    <button className='button--next' onClick={validation}>Next Step</button>
+    <button className={`button--back ${step===step1?'hidden':''}`} onClick={back}>Go Back</button>
+    <button className='button--next' onClick={next}>Next Step</button>
   </div>)
 }
 

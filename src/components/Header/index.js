@@ -1,13 +1,20 @@
 import './Header.css';
 
-function Header () {
+function Header ({step}) {
+  const steps = [1, 2, 3, 4];
+
   return (
   <div className="header">
     <div className='header__steps'>
-      <div className='header_step1 step'>1</div>
-      <div className='header_step2 step'>2</div>
-      <div className='header_step3 step'>3</div>
-      <div className='header_step4 step'>4</div>
+      {steps.map((stepNumber) => (
+        <div
+          key={stepNumber}
+          className={`step ${step === stepNumber? 'step--current':''}`}
+        >
+          {stepNumber}
+        </div>
+      ))
+      }
     </div>
   </div>
   )

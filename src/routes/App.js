@@ -26,7 +26,7 @@ function App() {
   return (
     <BrowserRouter>
         <div className="App">
-          <Header/>
+          <Header step={step}/>
           <main>
             <Routes>
               <Route path="/" element={<PersonalInfo
