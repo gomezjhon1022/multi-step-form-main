@@ -1,11 +1,27 @@
 import './plan.css';
 
-function Plan({monthly, setMonthly}) {
+function Plan({monthly, setMonthly, plan, setPlan}) {
 
   const handlePlanChange = (event) => {
     const newValue=event.target.checked;
     setMonthly(newValue);
   }
+
+  const choseArcade1 = () => {
+    setPlan('arcade1');
+  }
+  const choseAdvanced2 = () => {
+    setPlan('advanced2');
+  }
+  const chosePro3 = () => {
+    setPlan('pro3');
+  }
+
+
+  const arcade1= 'arcade1';
+  const advanced2= 'advanced2';
+  const pro3 = 'pro3';
+  console.log('this is plan',plan);
 
   return (
   <div className="card">
@@ -15,7 +31,7 @@ function Plan({monthly, setMonthly}) {
         yearly billing.
       </p>
       <div className='plan__options--container'>
-        <div className='plan arcade'>
+        <div className={`plan arcade ${plan===arcade1?'chosen':''}`} onClick={choseArcade1}>
           <div className='plan__image'></div>
           <div className='plan__information--container'>
             <div className='plan__name'>Arcade</div>
@@ -28,7 +44,7 @@ function Plan({monthly, setMonthly}) {
             }
           </div>
         </div>
-        <div className='plan advanced'>
+        <div className={`plan advanced ${plan===advanced2?'chosen':''}`} onClick={choseAdvanced2}>
           <div className='plan__image'></div>
           <div className='plan__information--container'>
             <div className='plan__name'>Advanced</div>
@@ -41,7 +57,7 @@ function Plan({monthly, setMonthly}) {
             }
           </div>
         </div>
-        <div className='plan pro'>
+        <div className={`plan pro ${plan===pro3?'chosen':''}`} onClick={chosePro3}>
           <div className='plan__image'></div>
           <div className='plan__information--container'>
             <div className='plan__name'>Pro</div>

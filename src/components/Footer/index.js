@@ -1,8 +1,10 @@
 import { useNavigate } from 'react-router-dom';
 import './Footer.css'
 
-function Footer({user,email,phone, regularexpressionUser,regularexpressionEmail,regularexpressionPhone, setUser, setEmail, setPhone}) {
+function Footer({user,email,phone, regularexpressionUser,regularexpressionEmail,regularexpressionPhone, setUser, setEmail, setPhone, step, setStep}) {
   const navigate = useNavigate();
+
+  const step1=1;
 
   const validation = () => {
     let data1Is=false;
@@ -33,12 +35,13 @@ function Footer({user,email,phone, regularexpressionUser,regularexpressionEmail,
 
     if (data1Is && data2Is && data3Is) {
       navigate('/plan');
+      setStep(2);
     }
   }
 
   return (
   <div className="footer">
-    <button className='button--back' >Go Back</button>
+    <button className={`button--back ${step===step1?'hidden':''}`} >Go Back</button>
     <button className='button--next' onClick={validation}>Next Step</button>
   </div>)
 }

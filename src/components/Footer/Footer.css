@@ -47,3 +47,7 @@
 .button--back:hover {
   color: var(--main-marine-blue);
 }
+
+.hidden {
+  display: none;
+}

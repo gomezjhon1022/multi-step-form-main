@@ -55,7 +55,7 @@
   margin-bottom: 16px;
   border:solid 1px var(--neutral-light-gray);
   border-radius: 8px;
-
+  cursor: pointer;
 }
 
 
@@ -166,6 +166,11 @@
   font-size: 16px;
   font-weight: 500;
   color:var(--main-marine-blue);
+}
+
+.chosen {
+  border: solid 2px var(--main-purplish-blue);
+  background-color: var(--neutral-light-gray);
 }
 
 

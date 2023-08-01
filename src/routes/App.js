@@ -14,6 +14,8 @@ function App() {
   const [email, setEmail]=useState({data:'', valid:true});
   const [phone, setPhone]=useState({data:'', valid:true});
   const [monthly, setMonthly]=useState(false);
+  const [plan, setPlan]=useState('arcade1');
+  const [step, setStep]=useState(1);
 
   const regularexpression = {
 	user: /^[a-zA-ZÀ-ÿ\s]{1,40}$/,
@@ -41,15 +43,19 @@ function App() {
               <Route path="/plan" element={<Plan
                 monthly={monthly}
                 setMonthly={setMonthly}
+                plan={plan}
+                setPlan={setPlan}
               />}></Route>
               <Route path="/addons" element={<AddOns/>}></Route>
               <Route path="/finishingup" element={<FinishingUp/>}></Route>
               <Route path="*" element={<NotFound></NotFound>}></Route>
             </Routes>
             <Footer
+              step={step}
               user={user}
               email={email}
               phone={phone}
+              setStep={setStep}
               setUser={setUser}
               setEmail={setEmail}
               setPhone={setPhone}
