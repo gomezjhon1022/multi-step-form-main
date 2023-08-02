@@ -1,10 +1,9 @@
 import './AddOns.css';
 
-function AddOns ({addOns,setAddOns, monthly}) {
+function AddOns ({addOns,setAddOns, monthly,addOnsPrices}) {
   const handleChange=(event)=> {
     const {id, checked} = event.target;
     setAddOns((prevAddOns) =>({...prevAddOns, [id]:checked}));
-    console.log(id,checked)
   }
 
   return (
@@ -25,8 +24,8 @@ function AddOns ({addOns,setAddOns, monthly}) {
               <p className='add__description'>Access to multiplayer games</p>
             </div>
             {!monthly
-            ?<span className='add__price'>+$1/mo</span>
-            :<span className='add__price'>+$10/yr</span>
+            ?<span className='add__price'>+${addOnsPrices.add1}/mo</span>
+            :<span className='add__price'>+${10*addOnsPrices.add1}/yr</span>
             }
           </label>
           <label className='addons' htmlFor='add2'>
@@ -39,8 +38,8 @@ function AddOns ({addOns,setAddOns, monthly}) {
               <p className='add__description'>Extra 1TB of cloud save</p>
             </div>
             {!monthly
-            ?<span className='add__price'>+$2/mo</span>
-            :<span className='add__price'>+$20/yr</span>
+            ?<span className='add__price'>+${addOnsPrices.add2}/mo</span>
+            :<span className='add__price'>+${10*addOnsPrices.add1}/yr</span>
             }
           </label>
           <label className='addons' htmlFor='add3'>
@@ -53,8 +52,8 @@ function AddOns ({addOns,setAddOns, monthly}) {
               <p className='add__description'>Custom theme on your profile</p>
             </div>
             {!monthly
-            ?<span className='add__price'>+$2/mo</span>
-            :<span className='add__price'>+$20/yr</span>
+            ?<span className='add__price'>+${addOnsPrices.add3}/mo</span>
+            :<span className='add__price'>+${10*addOnsPrices.add1}/yr</span>
             }
           </label>
         </form>

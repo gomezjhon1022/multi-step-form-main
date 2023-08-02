@@ -1,6 +1,23 @@
 import './FinishingUp.css';
+import { useNavigate } from 'react-router-dom';
 
-function FinishingUp() {
+function FinishingUp({plan,monthly,setStep,addOns, planPrices,addOnsPrices}) {
+  const navigate= useNavigate();
+  const handleChangePlan = () => {
+    navigate('/plan');
+    setStep(2);
+  }
+  const handleSumTotal = () => {
+    let sum = planPrices[plan];
+    for (const addOn in addOns) {
+      if (addOns[addOn]) {
+        sum += addOnsPrices[addOn];
+      }
+    }
+    return sum;
+
+  }
+
   return (
     <div className="card">
     <div className='card__finishingup'>
@@ -12,21 +29,61 @@ function FinishingUp() {
           <div className='summary'>
             <div className='summary__plan'>
               <div className='summary__plan--container'>
-              <p className='summary__name'>arcade (Monthly)</p>
-              <p className='summary__change'>Change</p>
+              {!monthly
+              ?<p className='summary__name'>{plan} (Monthly)</p>
+              :<p className='summary__name'>{plan} (Yearly)</p>
+              }
+              <p className='summary__change' onClick={handleChangePlan}>Change</p>
               </div>
-              <div className='summary__price'>
-                $9/mo
-              </div>
+              {!monthly
+              ?<div className='summary__price'>${planPrices[plan]}/mo</div>
+              :<div className='summary__price'>${planPrices[plan]*10}/yr</div>
+              }
             </div>
             <div className='summary__adds'>
-            {true&&<div>add</div>}
-            
+              {addOns.add1&&<>
+                <div className='subtitle--container'>
+                <p className='summary__subtitle'>Online service</p>
+                {!monthly
+                ?<p className='summary__price'>+${addOnsPrices.add1}/mo</p>
+                :<p className='summary__price'>+${10*addOnsPrices.add1}/yr</p>
+                }
+                </div>
+              </>
+              }
+              {addOns.add2&&<>
+                <div className='subtitle--container'>
+                  <p className='summary__subtitle'>Large storate</p>
+                  {!monthly
+                  ?<p className='summary__price'>+${addOnsPrices.add2}/mo</p>
+                  :<p className='summary__price'>+${10*addOnsPrices.add2}/yr</p>
+                  }
+                </div>
+              </>
+              }
+              {addOns.add3&&<>
+                <div className='subtitle--container'>
+                  <p className='summary__subtitle'>Customizable profile</p>
+                  {!monthly
+                  ?<p className='summary__price'>+${addOnsPrices.add3}/mo</p>
+                  :<p className='summary__price'>+${10*addOnsPrices.add3}/yr</p>
+                  }
+                </div>
+              </>
+              }
             </div>
           </div>
           <div className='summary__total'>
-            <div className='total__description'>Total (per month)</div>
-            <div className='total__price'>+$12/mo</div>
+            {!monthly
+            ?<>
+              <div className='total__description'>Total (per month)</div>
+              <div className='total__price'>{`+${handleSumTotal()}/mo`}</div>
+            </>
+            :<>
+              <div className='total__description'>Total (per year)</div>
+              <div className='total__price'>{`+${10*handleSumTotal()}/yr`}</div>
+            </>
+            }
           </div>
         </div>
     </div>

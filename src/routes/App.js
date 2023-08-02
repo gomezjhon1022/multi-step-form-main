@@ -6,6 +6,7 @@ import { FinishingUp } from '../components/FinishingUp';
 import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
 import { NotFound } from '../components/NotFound';
+import { ThankYou } from '../components/ThankYou';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { useState } from 'react';
 
@@ -14,9 +15,11 @@ function App() {
   const [email, setEmail]=useState({data:'', valid:true});
   const [phone, setPhone]=useState({data:'', valid:true});
   const [monthly, setMonthly]=useState(false);
-  const [plan, setPlan]=useState('arcade1');
+  const [plan, setPlan]=useState('Arcade');
   const [step, setStep]=useState(1);
   const [addOns, setAddOns]=useState({add1:false,add2:false,add3:false});
+  const [planPrices,setPlanPrices]=useState({Arcade:9,Advanced:12,Pro:15});
+  const [addOnsPrices,setAddOnsPrices]=useState({add1:1,add2:2,add3:2});
 
   const regularexpression = {
 	user: /^[a-zA-ZÀ-ÿ\s]{1,40}$/,
@@ -51,8 +54,17 @@ function App() {
                 addOns={addOns}
                 setAddOns={setAddOns}
                 monthly={monthly}
+                addOnsPrices={addOnsPrices}
                 />}></Route>
-              <Route path="/finishingup" element={<FinishingUp/>}></Route>
+              <Route path="/finishingup" element={<FinishingUp
+                plan={plan}
+                monthly={monthly}
+                setStep={setStep}
+                addOns={addOns}
+                planPrices={planPrices}
+                addOnsPrices={addOnsPrices}
+              />}></Route>
+              <Route path='/thankyou' element={<ThankYou></ThankYou>}></Route>
               <Route path="*" element={<NotFound></NotFound>}></Route>
             </Routes>
             <Footer

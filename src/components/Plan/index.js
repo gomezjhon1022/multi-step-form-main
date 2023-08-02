@@ -8,19 +8,19 @@ function Plan({monthly, setMonthly, plan, setPlan}) {
   }
 
   const choseArcade1 = () => {
-    setPlan('arcade1');
+    setPlan('Arcade');
   }
   const choseAdvanced2 = () => {
-    setPlan('advanced2');
+    setPlan('Advanced');
   }
   const chosePro3 = () => {
-    setPlan('pro3');
+    setPlan('Pro');
   }
 
 
-  const arcade1= 'arcade1';
-  const advanced2= 'advanced2';
-  const pro3 = 'pro3';
+  const arcade1= 'Arcade';
+  const advanced2= 'Advanced';
+  const pro3 = 'Pro';
   console.log('this is plan',plan);
 
   return (

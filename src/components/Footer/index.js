@@ -1,12 +1,10 @@
 import { useNavigate } from 'react-router-dom';
 import './Footer.css'
 
-function Footer({user,email,phone, regularexpressionUser,regularexpressionEmail,regularexpressionPhone, setUser, setEmail, setPhone, step, setStep,addOns,setAddOns}) {
+function Footer({user,email,phone, regularexpressionUser,regularexpressionEmail,regularexpressionPhone, setUser, setEmail, setPhone, step, setStep}) {
   const navigate = useNavigate();
 
-  const step1=1;
-
-  const next = (event) => {
+  const next = () => {
     let data1Is=false;
     let data2Is=false;
     let data3Is=false;
@@ -45,7 +43,10 @@ function Footer({user,email,phone, regularexpressionUser,regularexpressionEmail,
     if (step==3) {
       navigate('/finishingup');
       setStep(4);
-      console.log(addOns);
+    }
+    if (step==4) {
+      navigate('/thankyou');
+      setStep(5);
     }
   }
 
@@ -58,12 +59,16 @@ function Footer({user,email,phone, regularexpressionUser,regularexpressionEmail,
       setStep(2);
       navigate('/plan');
     }
+    if (step===4) {
+      setStep(3);
+      navigate('/addons');
+    }
   }
 
   return (
   <div className="footer">
-    <button className={`button--back ${step===step1?'hidden':''}`} onClick={back}>Go Back</button>
-    <button className='button--next' onClick={next}>Next Step</button>
+    <button className={`button--back ${step===1?'hidden':''}`} onClick={back}>Go Back</button>
+    {step!==4?<button className='button--next' onClick={next}>Next</button>:<button className='button--confirm' onClick={next}>Confirm</button>}
   </div>)
 }
 

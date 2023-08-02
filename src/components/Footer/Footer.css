@@ -49,6 +49,16 @@
 }
 
 .hidden {
-  /* display: none; */
   visibility: hidden;
+}
+
+.button--confirm {
+  height: 40px;
+  width: 110px;
+  font-weight: 700;
+  border-radius: 8px;
+  color: var(--neutral-light-gray);
+  background-color: var(--main-purplish-blue);
+  border: none;
+  cursor: pointer;
 }
