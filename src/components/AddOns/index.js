@@ -1,6 +1,6 @@
 import './AddOns.css';
 
-function AddOns ({addOns,setAddOns}) {
+function AddOns ({addOns,setAddOns, monthly}) {
   const handleChange=(event)=> {
     const {id, checked} = event.target;
     setAddOns((prevAddOns) =>({...prevAddOns, [id]:checked}));
@@ -24,10 +24,11 @@ function AddOns ({addOns,setAddOns}) {
               <p className='add__subtitle'>Online service</p>
               <p className='add__description'>Access to multiplayer games</p>
             </div>
-            <span className='add__price'>+$1/mo</span>
+            {!monthly
+            ?<span className='add__price'>+$1/mo</span>
+            :<span className='add__price'>+$10/yr</span>
+            }
           </label>
-
-
           <label className='addons' htmlFor='add2'>
             <input className='add__input' type='checkbox' id="add2"
               checked={addOns.add2}
@@ -37,7 +38,10 @@ function AddOns ({addOns,setAddOns}) {
               <p className='add__subtitle'>Large storate</p>
               <p className='add__description'>Extra 1TB of cloud save</p>
             </div>
-            <span className='add__price'>+$2/mo</span>
+            {!monthly
+            ?<span className='add__price'>+$2/mo</span>
+            :<span className='add__price'>+$20/yr</span>
+            }
           </label>
           <label className='addons' htmlFor='add3'>
             <input className='add__input' type='checkbox' id="add3"
@@ -48,7 +52,10 @@ function AddOns ({addOns,setAddOns}) {
               <p className='add__subtitle'>Customizable profile</p>
               <p className='add__description'>Custom theme on your profile</p>
             </div>
-            <span className='add__price'>+$2/mo</span>
+            {!monthly
+            ?<span className='add__price'>+$2/mo</span>
+            :<span className='add__price'>+$20/yr</span>
+            }
           </label>
         </form>
     </div>

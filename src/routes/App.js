@@ -47,7 +47,11 @@ function App() {
                 plan={plan}
                 setPlan={setPlan}
               />}></Route>
-              <Route path="/addons" element={<AddOns addOns={addOns} setAddOns={setAddOns}/>}></Route>
+              <Route path="/addons" element={<AddOns
+                addOns={addOns}
+                setAddOns={setAddOns}
+                monthly={monthly}
+                />}></Route>
               <Route path="/finishingup" element={<FinishingUp/>}></Route>
               <Route path="*" element={<NotFound></NotFound>}></Route>
             </Routes>

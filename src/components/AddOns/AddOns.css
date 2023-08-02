@@ -81,6 +81,7 @@
 
 .add__description {
   font-size: 11px;
+  color: var(--neutral-cool-gray);
 }
 
 .add__price {

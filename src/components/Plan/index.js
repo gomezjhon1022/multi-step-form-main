@@ -35,7 +35,7 @@ function Plan({monthly, setMonthly, plan, setPlan}) {
           <div className='plan__image'></div>
           <div className='plan__information--container'>
             <div className='plan__name'>Arcade</div>
-            {monthly
+            {!monthly
             ?<p className='plan__price'>$9/mo</p>
             :<div>
               <p className='plan__price'>$90/yr</p>
@@ -48,7 +48,7 @@ function Plan({monthly, setMonthly, plan, setPlan}) {
           <div className='plan__image'></div>
           <div className='plan__information--container'>
             <div className='plan__name'>Advanced</div>
-            {monthly
+            {!monthly
             ?<p className='plan__price'>$12/mo</p>
             :<div>
               <p className='plan__price'>$120/yr</p>
@@ -61,7 +61,7 @@ function Plan({monthly, setMonthly, plan, setPlan}) {
           <div className='plan__image'></div>
           <div className='plan__information--container'>
             <div className='plan__name'>Pro</div>
-            {monthly
+            {!monthly
             ?<p className='plan__price'>$150/mo</p>
             :<div>
               <p className='plan__price'>$90/yr</p>

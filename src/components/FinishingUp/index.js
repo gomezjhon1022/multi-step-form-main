@@ -1,3 +1,5 @@
+import './FinishingUp.css';
+
 function FinishingUp() {
   return (<h3>FinishingUp</h3>)
 }
