@@ -1,8 +1,6 @@
 import './PersonalInfo.css';
 import React from 'react';
 
-
-
 function PersonalInfo ({user, setUser,email,setEmail,phone, setPhone,validname, validemail, validphone}) {
   const onChangeName = (e) => {
     setUser({...user,data:e.target.value});
@@ -16,17 +14,14 @@ function PersonalInfo ({user, setUser,email,setEmail,phone, setPhone,validname, 
     setPhone({...phone,data:e.target.value});
   }
 
-
-
-
-
-
   return (
-  <div className="card">
-    <form>
-      <h2 className='card__title'>Personal info</h2>
-      <p className='card__description'>Please provide your name, email <br/>
-        addres, and phone number.
+  <div className="personalInfo__card">
+    <form className='personalInfo__form'>
+      <h2 className='personalInfo__card__title'>Personal info</h2>
+      <p className='personalInfo__card__description'>Please provide your name, email <br/>
+        address, and phone number.
+      </p>
+      <p className='personalInfo__card__description--desktop'>Please provide your name, email address, and phone number.
       </p>
       <div className='card__information'>
         <label className='card__label'  htmlFor="name">
@@ -38,7 +33,7 @@ function PersonalInfo ({user, setUser,email,setEmail,phone, setPhone,validname, 
         </label>
         <label className='card__label' htmlFor="email" >
           <div className='card__subtitle--container'>
-            <span className='card__subtitle'>Email Adress</span>
+            <span className='card__subtitle'>Email Address</span>
             {!validemail&&<p className='card--error'>Invalid email address</p>}
           </div>
           <input value={email.data} onChange={onChangeEmail} type='email' id="email" className={`card__input ${!validemail&&'input--error'}`} placeholder='e.g. stephenking@lorem.com' required></input>

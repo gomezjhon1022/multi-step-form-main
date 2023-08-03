@@ -12,7 +12,7 @@
 }
 
 
-.card {
+.personalInfo__card {
   height: 85%;
   width: 100%;
   background-color: var(--neutral-light-gray);
@@ -20,18 +20,22 @@
   justify-content: center;
 }
 
-.card__title {
+.personalInfo__card__title {
   text-align: left;
   margin: 16px 0;
 }
-.card__description {
+.personalInfo__card__description {
   text-align: left;
   color: var(--neutral-cool-gray);
   font-size: 18px;
   line-height: 130%;
 }
 
-form {
+.personalInfo__card__description--desktop {
+  display: none;
+}
+
+.personalInfo__form {
   height: 100%;
   padding: 0 24px;
   width: 90%;
@@ -39,7 +43,7 @@ form {
   border-radius: 15px;
   transform: translate(0, -72px);
 }
-.card__title {
+.personalInfo__card__title {
   color:var(--main-marine-blue)
 }
 
@@ -80,13 +84,48 @@ form {
 }
 
 .card__input {
-  color: var(--neutral-cool-gray);
+  color: var(--main-marine-blue);
   width: 100%;
   font-size: 14px;
+  font-weight: 700;
   border-radius: 4px;
   border: solid 1px var(--neutral-light-gray);
   padding: 10px;
 }
+.card__input::placeholder {
+  color: var(--neutral-cool-gray);
+  font-weight: 300;
+}
+.card__input:active {
+  border: solid 1px var(--main-purplish-blue);
+}
 
+
+@media (min-width: 700px) {
+  .personalInfo__card  {
+    background-color: var(--neutral-white);
+  }
+  .personalInfo__form {
+    transform: translate(0, 0);
+    padding: 56px 90px 0 24px;
+    background-color: var(--neutral-white);
+  }
+  .personalInfo__card__description {
+    display: none;
+  }
+  .personalInfo__card__description--desktop {
+    display: block;
+    text-align: left;
+    color: var(--neutral-cool-gray);
+    font-size: 18px;
+    line-height: 130%;
+  }
+  .card__subtitle {
+    margin-bottom: 10px;
+  }
+  .card__input {
+    border-radius: 8px;
+  }
+}
 
 

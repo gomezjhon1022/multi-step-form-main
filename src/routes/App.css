@@ -28,3 +28,16 @@ main {
   height: 73%;
   width: 100%;
 }
+
+
+@media (min-width: 700px) {
+  .App {
+      display: flex;
+      background-color: var(--neutral-white);
+  }
+
+  main {
+    height: 100%;
+    width: 70%;
+  }
+}

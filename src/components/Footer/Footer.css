@@ -66,3 +66,10 @@
 .invisible {
   display: none;
 }
+
+
+@media (min-width: 700px) {
+  .footer,.button--back {
+    background-color: var(--neutral-white);
+  }
+}

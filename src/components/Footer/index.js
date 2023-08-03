@@ -46,7 +46,7 @@ function Footer({user,email,phone, regularexpressionUser,regularexpressionEmail,
     }
     if (step==4) {
       navigate('/thankyou');
-      reload(event);
+      reload();
     }
   }
 
@@ -66,7 +66,6 @@ function Footer({user,email,phone, regularexpressionUser,regularexpressionEmail,
   }
 
   const reload = () =>{
-    console.log("aqui se ejecuta el codigo despues de 3 segundos")
     setTimeout(() => {
       setStep(1);
       setUser('');

@@ -24,6 +24,10 @@
   background-size: cover;
 }
 
+.header--desktop {
+  display: none;
+}
+
 .header__steps {
   display: flex;
   margin: 30px;
@@ -45,4 +49,53 @@
   background-color: var(--main-light-blue);
   color: var(--main-marine-blue);
 
+}
+
+
+@media (min-width: 700px) {
+  .header {
+      display: none;
+  }
+
+  .header--desktop {
+    width: 30%;
+    height: calc(100%-50);
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    margin: 25px;
+    border-radius: 15px;
+    background-image: url(../../assets/images/bg-sidebar-desktop.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .header__steps {
+    flex-direction: column;
+    width: 100%;
+    height: 45%;
+  }
+  .header__steps--container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  .step {
+    height: 40px;
+    width: 40px;
+  }
+  .step--desktop {
+    font-size: 14px;
+    text-align: start;
+    margin: 0 0 4px 10px;
+    color: var(--neutral-cool-gray);
+  }
+  .step__name--desktop {
+    font-size: 18px;
+    text-align: start;
+    margin-left: 10px;
+    font-weight: 500;
+    color: var(--neutral-magnolia);
+  }
 }
