@@ -62,3 +62,7 @@
   border: none;
   cursor: pointer;
 }
+
+.invisible {
+  display: none;
+}

@@ -1,0 +1,52 @@
+:root {
+  --main-marine-blue: hsl(213, 96%, 18%);
+  --main-purplish-blue:hsl(243, 100%, 62%);
+  --main-pastel-blue:hsl(228, 100%, 84%);
+  --main-light-blue:hsl(206, 94%, 87%);
+  --main--strawberry-red:hsl(354, 84%, 57%);
+
+  --neutral-cool-gray:hsl(231, 11%, 63%);
+  --neutral-light-gray:hsl(229, 24%, 87%);
+  --neutral-magnolia:hsl(231, 100%, 99%);
+  --neutral-white:hsl(0, 0%, 100%);
+}
+
+.card__bg {
+  height: 100%;
+  width: 100%;
+  background-color: var(--neutral-light-gray);
+  display: flex;
+  justify-content: center;
+}
+
+.thankyou__image {
+  height: 15%;
+
+}
+
+
+.card__title {
+  text-align: left;
+  margin: 16px 0;
+  color:var(--main-marine-blue)
+}
+.card__description {
+  text-align: center;
+  color: var(--neutral-cool-gray);
+  font-size: 18px;
+  line-height: 130%;
+}
+
+.card__thankyou {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 90%;
+  width: 90%;
+  padding: 0 24px;
+  background-color: var(--neutral-magnolia);
+  border-radius: 15px;
+  transform: translate(0, -90px);
+}
+
