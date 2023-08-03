@@ -97,15 +97,15 @@
 }
 
 .arcade .plan__image {
-  background-image: url(../../assets/icon-arcade.svg);
+  background-image: url(../../assets/images/icon-arcade.svg);
 }
 
 .advanced .plan__image {
-  background-image: url(../../assets/icon-advanced.svg);
+  background-image: url(../../assets/images/icon-advanced.svg);
 }
 
 .pro .plan__image {
-  background-image: url(../../assets/icon-pro.svg);
+  background-image: url(../../assets/images/icon-pro.svg);
 }
 
 .toggle__input {
@@ -119,20 +119,16 @@
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-
 }
 
 .toggle__fill {
   display: inline-block;
-  /* width:65px;
-  height:33px; */
   width: 34px;
   height: 17px;
   background-color: var(--main-marine-blue);
   border-radius: 100px;
   cursor: pointer;
   position: relative;
-
 }
 
 .toggle__fill::after {

@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import './Footer.css'
 
-function Footer({user,email,phone, regularexpressionUser,regularexpressionEmail,regularexpressionPhone, setUser, setEmail, setPhone, step, setStep}) {
+function Footer({user,email,phone, regularexpressionUser,regularexpressionEmail,regularexpressionPhone, setUser, setEmail, setPhone, step, setStep,setMonthly, setPlan,setAddOns}) {
   const navigate = useNavigate();
 
   const next = () => {
@@ -46,7 +46,7 @@ function Footer({user,email,phone, regularexpressionUser,regularexpressionEmail,
     }
     if (step==4) {
       navigate('/thankyou');
-      setStep(5);
+      reload(event);
     }
   }
 
@@ -63,6 +63,20 @@ function Footer({user,email,phone, regularexpressionUser,regularexpressionEmail,
       setStep(3);
       navigate('/addons');
     }
+  }
+
+  const reload = () =>{
+    console.log("aqui se ejecuta el codigo despues de 3 segundos")
+    setTimeout(() => {
+      setStep(1);
+      setUser('');
+      setEmail('');
+      setPhone('');
+      setMonthly(false);
+      setPlan('Arcade');
+      setAddOns({add1:false,add2:false,add3:false});
+      navigate('/'); // Navegar a la ruta '/plan' después de 3 segundos
+    }, 3000);
   }
 
   return (

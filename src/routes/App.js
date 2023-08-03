@@ -78,6 +78,8 @@ function App() {
               setEmail={setEmail}
               setPhone={setPhone}
               setAddOns={setAddOns}
+              setMonthly={setMonthly}
+              setPlan={setPlan}
               regularexpressionUser={regularexpression.user}
               regularexpressionEmail={regularexpression.email}
               regularexpressionPhone={regularexpression.phone}

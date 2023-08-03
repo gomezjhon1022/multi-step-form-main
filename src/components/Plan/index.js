@@ -21,7 +21,6 @@ function Plan({monthly, setMonthly, plan, setPlan}) {
   const arcade1= 'Arcade';
   const advanced2= 'Advanced';
   const pro3 = 'Pro';
-  console.log('this is plan',plan);
 
   return (
   <div className="card">

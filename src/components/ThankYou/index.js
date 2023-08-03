@@ -1,5 +1,5 @@
 import './ThankYou.css';
-import  imagen  from '../../assets/icon-thank-you.svg';
+import  imagen  from '../../assets/images/icon-thank-you.svg';
 function ThankYou () {
 
   return(
