@@ -81,7 +81,7 @@ function Footer({user,email,phone, regularexpressionUser,regularexpressionEmail,
   return (
   <div className={`footer ${step===5?'invisible':''}`}>
     <button className={`button--back ${step===1?'hidden':''}`} onClick={back}>Go Back</button>
-    {step!==4?<button className='button--next' onClick={next}>Next</button>:<button className='button--confirm' onClick={next}>Confirm</button>}
+    {step!==4?<button className='button--next' onClick={next}>Next Step</button>:<button className='button--confirm' onClick={next}>Confirm</button>}
   </div>)
 }
 

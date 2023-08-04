@@ -19,11 +19,13 @@ function FinishingUp({plan,monthly,setStep,addOns, planPrices,addOnsPrices}) {
   }
 
   return (
-    <div className="card">
+    <div className="finish__card">
     <div className='card__finishingup'>
       <h2 className='card__title'>Finishing up</h2>
-      <p className='card__description'>Double-check everything looks OK<br/>
+      <p className='finish__card__description'>Double-check everything looks OK<br/>
         before confirming.
+      </p>
+      <p className='finish__card__description--desktop'>Double-check everything looks OK before confirming.
       </p>
         <div className='summary--container'>
           <div className='summary'>
