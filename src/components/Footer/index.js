@@ -67,14 +67,8 @@ function Footer({user,email,phone, regularexpressionUser,regularexpressionEmail,
 
   const reload = () =>{
     setTimeout(() => {
-      setStep(1);
-      setUser('');
-      setEmail('');
-      setPhone('');
-      setMonthly(false);
-      setPlan('Arcade');
-      setAddOns({add1:false,add2:false,add3:false});
-      navigate('/'); // Navegar a la ruta '/plan' después de 3 segundos
+      navigate('/');
+      window.location.reload();
     }, 3000);
   }
 
