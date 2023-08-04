@@ -7,11 +7,13 @@ function AddOns ({addOns,setAddOns, monthly,addOnsPrices}) {
   }
 
   return (
-    <div className="card">
-    <div className='card__adds'>
+    <div className="addons__card">
+    <div className='addons__card__adds'>
       <h2 className='card__title'>Pick add-ons</h2>
-      <p className='card__description'>Add-ons help enhance your gaming<br/>
+      <p className='addons__card__description'>Add-ons help enhance your gaming<br/>
         experience.
+      </p>
+      <p className='addons__card__description--desktop'>Add-ons help enhance your gaming experience.
       </p>
         <form className='container__adds'>
           <label className='addons' htmlFor='add1'>

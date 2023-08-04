@@ -34,6 +34,7 @@
   color: var(--main-marine-blue);
   font-weight: 700;
 }
+
 .plan__card__description {
   text-align: left;
   margin-bottom: 20px;
@@ -69,7 +70,6 @@
   cursor: pointer;
 }
 
-
 .plan__time {
   display: flex;
   align-items: center;
@@ -97,6 +97,7 @@
   color: var(--main-marine-blue);
   font-weight: 500;
 }
+
 .plan__price {
   font-size: 16px;
   color: var(--neutral-cool-gray);
@@ -122,7 +123,6 @@
 .toggle__input {
   display: none;
 }
-
 
 .plan__time--switcher {
   width: 100%;
@@ -180,7 +180,6 @@
   background-color: var(--neutral-light-gray);
 }
 
-
 @media (min-width: 700px) {
   .plan__card  {
     background-color: var(--neutral-white);
@@ -192,7 +191,6 @@
     background-color: var(--neutral-white);
     transform: translate(0, 0);
   }
-
   .plan__card__description {
     display: none;
   }
@@ -203,47 +201,22 @@
     flex-direction: row;
     height: 50%;
     justify-content: space-between;
-    /* height: 60%;
-    width: 100%;
-    display: flex;
-    flex-direction: column; */
   }
-
   .plan {
-
     flex-direction: column;
     align-items: start;
     height: 100%;
     width: 30%;
-    /* width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    margin-bottom: 16px;
-    border:solid 1px var(--neutral-light-gray);
-    border-radius: 8px;
-    cursor: pointer; */
   }
   .plan__image {
     margin:14px;
     width: 50px;
     height: 50px;
-
-    /* width: 40px;
-    height: 40px;
-    margin: 0 14px;
-    padding: 8px;
-    background-repeat: no-repeat;
-    background-size: cover; */
   }
-
   .plan__information--container {
     margin:30px 0 0 20px ;
-    /* text-align: left; */
   }
   .plan__time {
     margin-top: 40px;
   }
-
-
 }

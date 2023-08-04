@@ -11,7 +11,6 @@
   --neutral-white:hsl(0, 0%, 100%);
 }
 
-
 .personalInfo__card {
   height: 85%;
   width: 100%;
@@ -24,6 +23,7 @@
   text-align: left;
   margin: 16px 0;
 }
+
 .personalInfo__card__description {
   text-align: left;
   color: var(--neutral-cool-gray);
@@ -43,6 +43,7 @@
   border-radius: 15px;
   transform: translate(0, -72px);
 }
+
 .personalInfo__card__title {
   color:var(--main-marine-blue)
 }
@@ -51,6 +52,7 @@
   display: inline-block;
   width: 100%;
 }
+
 .card__label {
   display: flex;
   flex-direction: column;
@@ -92,13 +94,16 @@
   border: solid 1px var(--neutral-light-gray);
   padding: 10px;
 }
+
 .card__input::placeholder {
   color: var(--neutral-cool-gray);
   font-weight: 300;
 }
+
 .card__input:focus {
   border: solid 2px var(--main-purplish-blue);
 }
+
 .card__input:focus-visible {
   border: solid 2px var(--main-purplish-blue);
 }

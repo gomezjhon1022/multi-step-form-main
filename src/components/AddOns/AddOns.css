@@ -11,7 +11,7 @@
   --neutral-white:hsl(0, 0%, 100%);
 }
 
-.card {
+.addons__card {
   height: 85%;
   width: 100%;
   background-color: var(--neutral-light-gray);
@@ -24,14 +24,23 @@
   margin: 16px 0;
   color:var(--main-marine-blue)
 }
-.card__description {
+
+.addons__card__description {
   text-align: left;
   color: var(--neutral-cool-gray);
   font-size: 18px;
   line-height: 130%;
 }
 
-.card__adds {
+.addons__card__description--desktop {
+  text-align: left;
+  color: var(--neutral-cool-gray);
+  font-size: 18px;
+  line-height: 130%;
+  display: none;
+}
+
+.addons__card__adds {
   height: 90%;
   width: 90%;
   padding: 0 24px;
@@ -39,7 +48,6 @@
   border-radius: 15px;
   transform: translate(0, -90px);
 }
-
 
 .container__adds {
   height: 50%;
@@ -64,6 +72,7 @@
   width: 10%;
   margin: 10px;
 }
+
 .add--container {
   height: 100%;
   width: 75%;
@@ -89,8 +98,30 @@
   font-size: 12px;
   margin-right: 15px;
   color:var(--main-purplish-blue);
-
 }
 
-
-
+@media (min-width: 700px) {
+  .addons__card  {
+    background-color: var(--neutral-white);
+  }
+  .addons__card__adds {
+    width: 100%;
+    transform: translate(0, 0);
+    padding:70px 90px 0 90px;
+  }
+  .addons__card__description {
+    display: none;
+  }
+  .addons__card__description--desktop {
+    display: block;
+  }
+  .container__adds {
+    margin-top: 40px;
+  }
+  .addons {
+    margin-bottom: 20px;
+  }
+  .add__description {
+    margin-top: 4px;
+  }
+}
