@@ -11,7 +11,7 @@
   --neutral-white:hsl(0, 0%, 100%);
 }
 
-.card {
+.plan__card {
   height: 85%;
   width: 100%;
   background-color: var(--neutral-light-gray);
@@ -19,7 +19,7 @@
   justify-content: center;
 }
 
-.card__plan {
+.plan__card__plan {
   height: 118%;
   width: 90%;
   padding: 0 24px;
@@ -28,16 +28,27 @@
   transform: translate(0, -90px);
 }
 
-.card__title {
+.plan__card__title {
   text-align: left;
   margin: 16px 0;
+  color: var(--main-marine-blue);
+  font-weight: 700;
 }
-.card__description {
+.plan__card__description {
   text-align: left;
   margin-bottom: 20px;
   color: var(--neutral-cool-gray);
   font-size: 18px;
   line-height: 130%;
+}
+
+.plan__card__description--desktop {
+  text-align: left;
+  margin-bottom: 20px;
+  color: var(--neutral-cool-gray);
+  font-size: 18px;
+  line-height: 130%;
+  display: none;
 }
 
 .plan__options--container {
@@ -170,4 +181,69 @@
 }
 
 
+@media (min-width: 700px) {
+  .plan__card  {
+    background-color: var(--neutral-white);
+  }
+  .plan__card__plan {
+    height: 90%;
+    width: 100%;
+    padding: 60px 90px 20px 90px;
+    background-color: var(--neutral-white);
+    transform: translate(0, 0);
+  }
 
+  .plan__card__description {
+    display: none;
+  }
+  .plan__card__description--desktop {
+    display: block;
+  }
+  .plan__options--container {
+    flex-direction: row;
+    height: 50%;
+    justify-content: space-between;
+    /* height: 60%;
+    width: 100%;
+    display: flex;
+    flex-direction: column; */
+  }
+
+  .plan {
+
+    flex-direction: column;
+    align-items: start;
+    height: 100%;
+    width: 30%;
+    /* width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+    border:solid 1px var(--neutral-light-gray);
+    border-radius: 8px;
+    cursor: pointer; */
+  }
+  .plan__image {
+    margin:14px;
+    width: 50px;
+    height: 50px;
+
+    /* width: 40px;
+    height: 40px;
+    margin: 0 14px;
+    padding: 8px;
+    background-repeat: no-repeat;
+    background-size: cover; */
+  }
+
+  .plan__information--container {
+    margin:30px 0 0 20px ;
+    /* text-align: left; */
+  }
+  .plan__time {
+    margin-top: 40px;
+  }
+
+
+}

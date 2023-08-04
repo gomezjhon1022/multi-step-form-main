@@ -72,4 +72,11 @@
   .footer,.button--back {
     background-color: var(--neutral-white);
   }
+  .button--back {
+    text-align: left;
+  }
+
+  .footer {
+    padding: 0 90px 50px 90px;
+  }
 }

@@ -23,11 +23,13 @@ function Plan({monthly, setMonthly, plan, setPlan}) {
   const pro3 = 'Pro';
 
   return (
-  <div className="card">
-    <div className='card__plan'>
-      <h2 className='card__title'>Select your plan</h2>
-      <p className='card__description'>You have de option of monthly or<br/>
+  <div className="plan__card">
+    <div className='plan__card__plan'>
+      <h2 className='plan__card__title'>Select your plan</h2>
+      <p className='plan__card__description'>You have de option of monthly or<br/>
         yearly billing.
+      </p>
+      <p className='plan__card__description--desktop'>You have de option of monthly or yearly billing.
       </p>
       <div className='plan__options--container'>
         <div className={`plan arcade ${plan===arcade1?'chosen':''}`} onClick={choseArcade1}>

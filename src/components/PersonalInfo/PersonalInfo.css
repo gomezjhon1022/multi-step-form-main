@@ -96,18 +96,23 @@
   color: var(--neutral-cool-gray);
   font-weight: 300;
 }
-.card__input:active {
-  border: solid 1px var(--main-purplish-blue);
+.card__input:focus {
+  border: solid 2px var(--main-purplish-blue);
+}
+.card__input:focus-visible {
+  border: solid 2px var(--main-purplish-blue);
 }
 
 
 @media (min-width: 700px) {
   .personalInfo__card  {
     background-color: var(--neutral-white);
+    padding: 0 90px;
   }
   .personalInfo__form {
     transform: translate(0, 0);
-    padding: 56px 90px 0 24px;
+    width: 100%;
+    padding: 56px 0 0 0px;
     background-color: var(--neutral-white);
   }
   .personalInfo__card__description {
