@@ -16,7 +16,7 @@ This project is a multi-step form built using React.js. It allows users to compl
 
 The deployment is in the following link:
 
-https://gomezjhon1022.github.io//
+https://gomezjhon1022.github.io/multi-step-form-main/
 
 This project was created thanks to the resources provided by Frontend Mentor (frontendmentor.io), a website that offers challenges for frontend developers. Frontend Mentor offers a wide range of design challenges that help developers enhance their skills by building real-world projects. The platform provides design files and detailed specifications for each challenge, allowing developers to practice and showcase their abilities in HTML, CSS, and JavaScript. The project's completion is a result of leveraging the valuable resources and support provided by Frontend Mentor.
 

@@ -28,7 +28,7 @@ function App() {
 }
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename='/multi-step-form-main'>
         <div className="App">
           <Header step={step}/>
           <main>
