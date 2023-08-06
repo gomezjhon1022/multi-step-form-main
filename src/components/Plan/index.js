@@ -1,6 +1,14 @@
+import React from 'react';
 import './plan.css';
+import { MultiStepContext } from '../MultiStepContext';
 
-function Plan({monthly, setMonthly, plan, setPlan}) {
+function Plan() {
+  const {
+    monthly,
+    setMonthly,
+    plan,
+    setPlan
+  }=React.useContext(MultiStepContext);
 
   const handlePlanChange = (event) => {
     const newValue=event.target.checked;
@@ -16,7 +24,6 @@ function Plan({monthly, setMonthly, plan, setPlan}) {
   const chosePro3 = () => {
     setPlan('Pro');
   }
-
 
   const arcade1= 'Arcade';
   const advanced2= 'Advanced';

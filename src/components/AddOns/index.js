@@ -1,6 +1,14 @@
+import React from 'react';
 import './AddOns.css';
+import { MultiStepContext } from '../MultiStepContext';
 
-function AddOns ({addOns,setAddOns, monthly,addOnsPrices}) {
+function AddOns () {
+  const {
+    addOns,
+    setAddOns,
+    monthly,
+    addOnsPrices
+  }=React.useContext(MultiStepContext);
   const handleChange=(event)=> {
     const {id, checked} = event.target;
     setAddOns((prevAddOns) =>({...prevAddOns, [id]:checked}));
@@ -61,9 +69,6 @@ function AddOns ({addOns,setAddOns, monthly,addOnsPrices}) {
         </form>
     </div>
   </div>
-
-
-
   )
 }
 

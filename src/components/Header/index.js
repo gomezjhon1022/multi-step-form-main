@@ -1,12 +1,12 @@
+import React from 'react';
 import './Header.css';
+import { MultiStepContext } from '../MultiStepContext';
 
-function Header ({step}) {
-  const steps = [
-    {number:1,name:'YOUR INFO'},
-    {number:2,name:'SELECT PLAN'},
-    {number:3,name:'ADD-ONS'},
-    {number:4,name:'SUMMARY'},
-  ];
+function Header () {
+  const {
+    step,
+    steps
+  } =React.useContext(MultiStepContext);
 
   return (
     <>

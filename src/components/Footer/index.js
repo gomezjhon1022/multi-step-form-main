@@ -1,7 +1,27 @@
 import { useNavigate } from 'react-router-dom';
 import './Footer.css'
+import React from 'react';
+import { MultiStepContext } from '../MultiStepContext';
 
-function Footer({user,email,phone, regularexpressionUser,regularexpressionEmail,regularexpressionPhone, setUser, setEmail, setPhone, step, setStep,setMonthly, setPlan,setAddOns}) {
+function Footer() {
+  const {
+    user,
+    email,
+    phone,
+    regularexpression,
+    regularexpressionUser=regularexpression.user,
+    regularexpressionEmail=regularexpression.email,
+    regularexpressionPhone=regularexpression.phone,
+    setUser,
+    setEmail,
+    setPhone,
+    step,
+    setStep,
+    // setMonthly,
+    // setPlan,
+    // setAddOns
+  }=React.useContext(MultiStepContext);
+
   const navigate = useNavigate();
 
   const next = () => {

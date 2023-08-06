@@ -1,7 +1,21 @@
+import { MultiStepContext } from '../MultiStepContext';
 import './PersonalInfo.css';
 import React from 'react';
 
-function PersonalInfo ({user, setUser,email,setEmail,phone, setPhone,validname, validemail, validphone}) {
+function PersonalInfo () {
+
+  const {
+    user,
+    setUser,
+    email,
+    setEmail,
+    phone,
+    setPhone,
+    validname=user.valid,
+    validemail =email.valid,
+    validphone=phone.valid
+  } =React.useContext(MultiStepContext);
+
   const onChangeName = (e) => {
     setUser({...user,data:e.target.value});
   }

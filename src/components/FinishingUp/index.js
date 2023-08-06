@@ -1,7 +1,17 @@
+import { MultiStepContext } from '../MultiStepContext';
 import './FinishingUp.css';
 import { useNavigate } from 'react-router-dom';
+import React from 'react';
 
-function FinishingUp({plan,monthly,setStep,addOns, planPrices,addOnsPrices}) {
+function FinishingUp() {
+  const {
+    plan,
+    monthly,
+    setStep,
+    addOns,
+    planPrices,
+    addOnsPrices
+  }=React.useContext(MultiStepContext);
   const navigate= useNavigate();
   const handleChangePlan = () => {
     navigate('/plan');
@@ -15,7 +25,6 @@ function FinishingUp({plan,monthly,setStep,addOns, planPrices,addOnsPrices}) {
       }
     }
     return sum;
-
   }
 
   return (
